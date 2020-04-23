@@ -179,7 +179,7 @@ import SwiftUI
             }
         .foregroundColor(colours[Int(scrollAmount)])
         .focusable(true)
-        .digitalCrownRotation($scrollAmount, from: 0, through: 7, by: 1, sensitivity: .low, isContinuous: true)
+        .digitalCrownRotation($scrollAmount, from: 0, through: 8, by: 1, sensitivity: .low, isContinuous: true)
         .onAppear(perform: {let _ = self.updateTimer})
         .navigationBarTitle("WatchFace")
     }
