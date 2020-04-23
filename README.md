@@ -6,5 +6,7 @@ and in the centre is an analog dial showing the seconds
 
 Rotate the Digital crown to change the colours.
 
+The code was developed for my Series 3 apple watch (44mm) and needs to be changed to fit the full range of watches.
+
 This code is free to use, I only ask you mention me.
 Thanks
