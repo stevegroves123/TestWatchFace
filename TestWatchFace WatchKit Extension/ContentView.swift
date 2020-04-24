@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
- 
+
 // create extention to the CGRect library to use center and radius
     extension CGRect {
         var center: CGPoint {
@@ -56,7 +56,7 @@ import SwiftUI
                 .frame(width: 1, height: 10)
             Spacer()
             }
-            .frame(width: 158, height: 158, alignment: .center)
+        .frame(width: nil, height: nil, alignment: .center)
             .rotationEffect(Angle.degrees(Double(tick)/60 * 360))
         }
         
@@ -159,29 +159,32 @@ import SwiftUI
         }
     
     var body: some View {
+    GeometryReader { geo in
         ZStack {
             ForEach(0..<60) {tickMark in
                 self.tick(at: tickMark)
+                .padding()
             }
             secondHand()
                 .stroke(lineWidth: 1)
-                .rotationEffect(Angle.degrees(Double(mySecond) * 360 / 60))
+                .rotationEffect(Angle.degrees(Double(self.mySecond) * 360 / 60))
             
-            Text("\(self.myDay)\(lookupDay(myDay: self.myDay))")
-                .offset(x: 60, y:-78)
-            Text("\(lookupMonth(myMonth: myMonth))")
-                .offset(x:-60, y:78)
-            Text("\(lookupDayofWeek(myWeekday: myWeekday))")
-                .offset(x:-60, y:-80)
-            Text("\(myYear.description)")
-                .offset(x: 60, y:75)
+            Text("\(self.myDay)\(self.lookupDay(myDay: self.myDay))")
+                .offset(x:geo.size.width*0.4 ,y:-geo.size.width*0.4 )
+            Text("\(self.lookupMonth(myMonth: self.myMonth))")
+                .offset(x:-geo.size.width*0.4, y:geo.size.width*0.4)
+            Text("\(self.lookupDayofWeek(myWeekday: self.myWeekday))")
+                .offset(x:-geo.size.width*0.4, y:-geo.size.width*0.4)
+            Text("\(self.myYear.description)")
+                .offset(x: geo.size.width*0.38, y:geo.size.width*0.4)
             Color.clear
             }
-        .foregroundColor(colours[Int(scrollAmount)])
+        .foregroundColor(self.colours[Int(self.scrollAmount)])
         .focusable(true)
-        .digitalCrownRotation($scrollAmount, from: 0, through: 8, by: 1, sensitivity: .low, isContinuous: true)
+        .digitalCrownRotation(self.$scrollAmount, from: 0, through: 8, by: 1, sensitivity: .low, isContinuous: true)
         .onAppear(perform: {let _ = self.updateTimer})
         .navigationBarTitle("WatchFace")
+        }
     }
 }
 
