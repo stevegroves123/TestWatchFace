@@ -56,7 +56,7 @@ import SwiftUI
                 .frame(width: 1, height: 10)
             Spacer()
             }
-        .frame(width: nil, height: nil, alignment: .center)
+            .frame(width: nil, height: nil, alignment: .center)
             .rotationEffect(Angle.degrees(Double(tick)/60 * 360))
         }
         
@@ -154,7 +154,7 @@ import SwiftUI
             case 7:
                 return "Sat"
             default:
-                return "BlurDay"
+                return "BDay"
             }
         }
     
@@ -170,15 +170,16 @@ import SwiftUI
                 .rotationEffect(Angle.degrees(Double(self.mySecond) * 360 / 60))
             
             Text("\(self.myDay)\(self.lookupDay(myDay: self.myDay))")
-                .offset(x:geo.size.width*0.4 ,y:-geo.size.width*0.4 )
+                .offset(x:geo.size.width*0.38 ,y:-geo.size.height*0.45)
             Text("\(self.lookupMonth(myMonth: self.myMonth))")
-                .offset(x:-geo.size.width*0.4, y:geo.size.width*0.4)
+                .offset(x:-geo.size.width*0.38, y:geo.size.height*0.45)
             Text("\(self.lookupDayofWeek(myWeekday: self.myWeekday))")
-                .offset(x:-geo.size.width*0.4, y:-geo.size.width*0.4)
+                .offset(x:-geo.size.width*0.38, y:-geo.size.height*0.45)
             Text("\(self.myYear.description)")
-                .offset(x: geo.size.width*0.38, y:geo.size.width*0.4)
+                .offset(x: geo.size.width*0.38, y:geo.size.height*0.45)
             Color.clear
             }
+            
         .foregroundColor(self.colours[Int(self.scrollAmount)])
         .focusable(true)
         .digitalCrownRotation(self.$scrollAmount, from: 0, through: 8, by: 1, sensitivity: .low, isContinuous: true)
