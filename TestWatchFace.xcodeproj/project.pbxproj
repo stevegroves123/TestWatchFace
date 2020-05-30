@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F25A0CD243A51FF007E0297 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F25A0CC243A51FF007E0297 /* Media.xcassets */; };
+		4F73B057248118F5009F367B /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F73B056248118F5009F367B /* ComplicationController.swift */; };
 		4FBF113D2438FA95009F549F /* TestWatchFace WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4FBF113C2438FA95009F549F /* TestWatchFace WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4FBF11432438FA95009F549F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FBF11412438FA95009F549F /* Interface.storyboard */; };
 		4FBF11452438FA97009F549F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FBF11442438FA97009F549F /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		4F25A0CC243A51FF007E0297 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		4F73B056248118F5009F367B /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		4FBF11382438FA95009F549F /* TestWatchFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestWatchFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBF113C2438FA95009F549F /* TestWatchFace WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TestWatchFace WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBF11422438FA95009F549F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				4FBF11502438FA97009F549F /* ContentView.swift */,
 				4FBF11522438FA97009F549F /* HostingController.swift */,
 				4FBF11542438FA97009F549F /* ExtensionDelegate.swift */,
+				4F73B056248118F5009F367B /* ComplicationController.swift */,
 				4FBF11562438FA98009F549F /* Assets.xcassets */,
 				4FBF115B2438FA98009F549F /* Info.plist */,
 				4FBF11582438FA98009F549F /* Preview Content */,
@@ -271,6 +274,7 @@
 				4FBF11532438FA97009F549F /* HostingController.swift in Sources */,
 				4FBF11512438FA97009F549F /* ContentView.swift in Sources */,
 				4FBF11552438FA97009F549F /* ExtensionDelegate.swift in Sources */,
+				4F73B057248118F5009F367B /* ComplicationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

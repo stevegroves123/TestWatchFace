@@ -26,14 +26,14 @@ import SwiftUI
 // create the various variables
     struct ContentView: View {
         @State var degreesPointedTo = 0
-        @State var myMonth = 0
-        @State var myDay = 0
+        @State var myMonth = 1
+        @State var myDay = 1
         @State var myHour = 0
         @State var myMinute = 0
         @State var mySecond = 0
         @State var myWeekday = 0
         @State var weekDayText = ""
-        @State var myYear = 20
+        @State var myYear = 1970
         @State var components = Calendar.current.dateComponents([.day, .month, .hour, .minute, .second, .weekday, .year], from: Date())
         @State var scrollAmount = 0.0
         let colours: [Int: Color] = [
@@ -154,7 +154,7 @@ import SwiftUI
             case 7:
                 return "Sat"
             default:
-                return "BDay"
+                return "Day"
             }
         }
     
