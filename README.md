@@ -6,7 +6,9 @@ and in the centre is an analog dial showing the seconds
 
 Rotate the Digital crown to change the colours.
 
-The code was developed for my Series 3 apple watch (44mm) and needs to be changed to fit the full range of watches.
+The code was developed for my Series 3 apple watch (44mm), used Geometry reader to scale for the different watch sizes.
+
+Complication added for some of the screens, Modular and Circular small, check out the screen shots.
 
 This code is free to use, I only ask you mention me.
 Thanks
